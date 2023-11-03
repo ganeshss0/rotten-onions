@@ -90,7 +90,7 @@ def acess_credentials(*args, **kwargs) -> str:
 
 @app.route(rule='/admin', methods=['POST'])
 @cross_origin()
-def validate_admin_login(*args, **kwargs) -> Response|str:
+def validate_admin_login(*args, **kwargs) -> Response:
     '''Return credentials on validation or redirect to admin login page.'''
 
     client_ip = request.remote_addr
